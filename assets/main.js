@@ -1,74 +1,80 @@
-  let tours = [];
-  const grid = document.getElementById('tourGrid');
-  const filtersEl = document.getElementById('filters');
-  const searchInput = document.getElementById('searchInput');
-  const detailView = document.getElementById('detailView');
-  const homeView = document.getElementById('homeView');
-  const menuBtn = document.getElementById('menuBtn');
-  const navLinks = document.getElementById('navLinks');
-  const mainContent = document.getElementById('main-content');
-  const hero = document.getElementById('home');
-  const heroPreview = document.getElementById('heroPreview');
-  const galleryModal = document.getElementById('galleryModal');
-  const galleryModalImg = document.getElementById('galleryModalImg');
-  let activeCategory = 'All';
-  let heroSlideIndex = 0;
-  let heroSlideshowTimer;
-  let heroSlideshowPaused = false;
-  let heroFadeTimer;
-  let modalReturnTarget;
-  let categories = ['All'];
-  let heroSlides = [];
+let tours = [];
+const grid = document.getElementById('tourGrid');
+const filtersEl = document.getElementById('filters');
+const searchInput = document.getElementById('searchInput');
+const detailView = document.getElementById('detailView');
+const homeView = document.getElementById('homeView');
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+const mainContent = document.getElementById('main-content');
+const hero = document.getElementById('home');
+const heroPreview = document.getElementById('heroPreview');
+const galleryModal = document.getElementById('galleryModal');
+const galleryModalImg = document.getElementById('galleryModalImg');
+let activeCategory = 'All';
+let heroSlideIndex = 0;
+let heroSlideshowTimer;
+let heroSlideshowPaused = false;
+let heroFadeTimer;
+let modalReturnTarget;
+let categories = ['All'];
+let heroSlides = [];
 
-  const assetUrl = path => new URL(path, document.baseURI).href;
-  const cssImage = path => `url(${assetUrl(path)})`;
-  const attr = value => String(value).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+const assetUrl = path => new URL(path, document.baseURI).href;
+const cssImage = path => `url(${assetUrl(path)})`;
+const attr = value => String(value).replace(/[&<>"']/g, c => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+}[c]));
 
-  async function loadTours() {
-    const response = await fetch('assets/tours.json', { cache:'no-cache' });
+async function loadTours() {
+    const response = await fetch('assets/tours.json', {cache: 'no-cache'});
     if (!response.ok) throw new Error(`Unable to load tours.json (${response.status})`);
     tours = await response.json();
-  }
+}
 
-  function buildDerivedData() {
+function buildDerivedData() {
     activeCategory = 'All';
     categories = ['All', ...Array.from(new Set(tours.map(t => t.category.split(' & ')[0]).filter(Boolean)))];
     heroSlides = [
-      { src:'assets/images/home-hero.jpg', label:'Dominican Republic adventure collage' },
-      ...tours.flatMap(t => [
-        { src:t.heroImage, label:t.title },
-        ...t.gallery.map((src, index) => ({ src, label:`${t.title} activity ${index + 1}` }))
-      ])
+        {src: 'assets/images/home-hero.jpg', label: 'Dominican Republic adventure collage'},
+        ...tours.flatMap(t => [
+            {src: t.heroImage, label: t.title},
+            ...t.gallery.map((src, index) => ({src, label: `${t.title} activity ${index + 1}`}))
+        ])
     ];
     setHeroSlide(0);
-  }
+}
 
-  async function initApp() {
+async function initApp() {
     try {
-      await loadTours();
-      buildDerivedData();
-      startHeroSlideshow();
-      initFilters();
-      renderCards();
-      wireReveals();
-      route();
+        await loadTours();
+        buildDerivedData();
+        startHeroSlideshow();
+        initFilters();
+        renderCards();
+        wireReveals();
+        route();
     } catch (error) {
-      console.error(error);
-      grid.innerHTML = `<div class="info-card" style="grid-column:1/-1"><h3>Excursions could not load</h3><p>Please refresh the page and try again.</p></div>`;
-      showToast('Excursions could not load');
+        console.error(error);
+        grid.innerHTML = `<div class="info-card" style="grid-column:1/-1"><h3>Excursions could not load</h3><p>Please refresh the page and try again.</p></div>`;
+        showToast('Excursions could not load');
     }
-  }
+}
 
-  function setHeroSlide(index) {
+function setHeroSlide(index) {
     if (!hero || !heroSlides.length) return;
     heroSlideIndex = (index + heroSlides.length) % heroSlides.length;
     const slide = heroSlides[heroSlideIndex];
     hero.style.setProperty('--cover', cssImage(slide.src));
     hero.style.setProperty('--cover-next', cssImage(slide.src));
     heroPreview?.setAttribute('aria-label', slide.label);
-  }
+}
 
-  function transitionHeroSlide(index) {
+function transitionHeroSlide(index) {
     if (!hero || !heroSlides.length) return;
     const nextIndex = (index + heroSlides.length) % heroSlides.length;
     const slide = heroSlides[nextIndex];
@@ -79,44 +85,44 @@
     heroPreview?.setAttribute('aria-label', slide.label);
     hero.classList.add('is-fading');
     heroFadeTimer = window.setTimeout(() => {
-      hero.style.setProperty('--cover', nextImage);
-      hero.classList.remove('is-fading');
+        hero.style.setProperty('--cover', nextImage);
+        hero.classList.remove('is-fading');
     }, 900);
-  }
+}
 
-  function randomHeroSlide() {
+function randomHeroSlide() {
     if (heroSlides.length < 2) return;
     let nextIndex = heroSlideIndex;
     while (nextIndex === heroSlideIndex) {
-      nextIndex = Math.floor(Math.random() * heroSlides.length);
+        nextIndex = Math.floor(Math.random() * heroSlides.length);
     }
     transitionHeroSlide(nextIndex);
-  }
+}
 
-  function startHeroSlideshow() {
+function startHeroSlideshow() {
     window.clearInterval(heroSlideshowTimer);
     heroSlideshowTimer = window.setInterval(() => {
-      if (!heroSlideshowPaused) randomHeroSlide();
+        if (!heroSlideshowPaused) randomHeroSlide();
     }, 5000);
-  }
+}
 
-  function toggleHeroSlideshow(button) {
+function toggleHeroSlideshow(button) {
     heroSlideshowPaused = !heroSlideshowPaused;
     button.setAttribute('aria-pressed', String(heroSlideshowPaused));
     button.setAttribute('aria-label', heroSlideshowPaused ? 'Resume image slideshow' : 'Pause image slideshow');
     button.textContent = heroSlideshowPaused ? '▶' : 'Ⅱ';
-  }
+}
 
-  function initFilters() {
+function initFilters() {
     filtersEl.innerHTML = categories.map(cat => `<button class="filter-btn ${cat === activeCategory ? 'active' : ''}" type="button" data-category="${cat}" aria-pressed="${cat === activeCategory}">${cat}</button>`).join('');
     filtersEl.querySelectorAll('button').forEach(btn => btn.addEventListener('click', () => {
-      activeCategory = btn.dataset.category;
-      initFilters();
-      renderCards();
+        activeCategory = btn.dataset.category;
+        initFilters();
+        renderCards();
     }));
-  }
+}
 
-  function cardTemplate(t) {
+function cardTemplate(t) {
     return `<a class="tour-card" href="#tour/${attr(t.id)}" style="--img:${cssImage(t.heroImage)}" aria-label="Open details for ${attr(t.title)}">
       <div class="card-topline"><span class="order-badge">${t.order}</span><span class="category-badge">${t.category}</span></div>
       <div class="tour-card-content">
@@ -126,31 +132,33 @@
         <div class="card-actions"><span class="view-link">View details <span class="arrow">→</span></span></div>
       </div>
     </a>`;
-  }
+}
 
-  function renderCards() {
+function renderCards() {
     const q = (searchInput?.value || '').trim().toLowerCase();
     const filtered = tours.filter(t => {
-      const categoryOk = activeCategory === 'All' || t.category.toLowerCase().includes(activeCategory.toLowerCase());
-      const haystack = [t.title, t.short, t.category, t.tagline, ...t.destinations, ...t.highlights].join(' ').toLowerCase();
-      return categoryOk && (!q || haystack.includes(q));
+        const categoryOk = activeCategory === 'All' || t.category.toLowerCase().includes(activeCategory.toLowerCase());
+        const haystack = [t.title, t.short, t.category, t.tagline, ...t.destinations, ...t.highlights].join(' ').toLowerCase();
+        return categoryOk && (!q || haystack.includes(q));
     });
     grid.setAttribute('aria-live', q ? 'polite' : 'off');
     grid.innerHTML = filtered.length ? filtered.map(cardTemplate).join('') : `<div class="info-card" style="grid-column:1/-1"><h3>No excursions found</h3><p>Try a different search or select All.</p></div>`;
     grid.querySelectorAll('.tour-card').forEach((card, index) => {
-      requestAnimationFrame(() => setTimeout(() => card.classList.add('show'), 70 * index));
+        requestAnimationFrame(() => setTimeout(() => card.classList.add('show'), 70 * index));
     });
-  }
+}
 
-  function list(items, cls = '') { return `<ul class="${cls}">${items.map(i => `<li>${i}</li>`).join('')}</ul>`; }
+function list(items, cls = '') {
+    return `<ul class="${cls}">${items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+}
 
-  function detailTemplate(t) {
+function detailTemplate(t) {
     const otherTours = tours.filter(x => x.id !== t.id).slice(0, 8).map(x => `<a class="mini-tour" href="#tour/${attr(x.id)}" style="--img:${cssImage(x.heroImage)}" aria-label="Open details for ${attr(x.title)}"><span>${x.title}</span></a>`).join('');
     const activities = t.activities.map((a, i) => `<article class="activity-card reveal"><img src="${assetUrl(t.gallery[i])}" alt="${a.title}"><div class="activity-body"><div class="activity-num">${a.num}</div><h3 class="serif">${a.title}</h3><p>${a.text}</p></div></article>`).join('');
     const gallery = t.gallery.map((src, i) => {
-      const imageUrl = assetUrl(src);
-      const alt = `${t.title} gallery image ${i + 1}`;
-      return `<button class="gallery-slide" type="button" data-action="open-gallery-modal" data-src="${attr(imageUrl)}" data-alt="${attr(alt)}" aria-label="Open ${attr(alt)}"><img src="${imageUrl}" alt="${attr(alt)}" loading="lazy"></button>`;
+        const imageUrl = assetUrl(src);
+        const alt = `${t.title} gallery image ${i + 1}`;
+        return `<button class="gallery-slide" type="button" data-action="open-gallery-modal" data-src="${attr(imageUrl)}" data-alt="${attr(alt)}" aria-label="Open ${attr(alt)}"><img src="${imageUrl}" alt="${attr(alt)}" loading="lazy"></button>`;
     }).join('');
     return `
       <button class="back-btn" type="button" data-action="all-excursions">← All excursions</button>
@@ -166,7 +174,7 @@
               <div class="detail-stat"><small>Duration</small><b>${t.duration}</b></div>
               <div class="detail-stat"><small>Activity level</small><b>${t.level}</b></div>
               <div class="detail-stat"><small>Group size</small><b>${t.group}</b></div>
-              <div class="detail-stat"><small>Destinations</small><b>${t.destinations.slice(0,2).join(', ')}</b></div>
+              <div class="detail-stat"><small>Destinations</small><b>${t.destinations.slice(0, 2).join(', ')}</b></div>
             </div>
           </aside>
         </div>
@@ -197,9 +205,9 @@
         </section>
         <article class="info-card reveal" style="margin-top:24px"><h3 class="serif">More excursions</h3><div class="next-tours">${otherTours}</div></article>
       </div>`;
-  }
+}
 
-  function openTour(id, push = true) {
+function openTour(id, push = true) {
     const t = tours.find(x => x.id === id);
     if (!t) return goHome(false);
     detailView.innerHTML = detailTemplate(t);
@@ -207,64 +215,64 @@
     detailView.classList.add('active');
     closeMenu();
     if (push) location.hash = `tour/${id}`;
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     wireReveals();
     detailView.querySelector('h1')?.setAttribute('tabindex', '-1');
-    detailView.querySelector('h1')?.focus({ preventScroll:true });
-  }
+    detailView.querySelector('h1')?.focus({preventScroll: true});
+}
 
-  function goHome(push = true) {
+function goHome(push = true) {
     detailView.classList.remove('active');
     detailView.innerHTML = '';
     document.body.classList.remove('detail-open');
     if (push) location.hash = 'excursions';
-    setTimeout(() => document.getElementById('excursions')?.scrollIntoView({behavior:'smooth', block:'start'}), 40);
+    setTimeout(() => document.getElementById('excursions')?.scrollIntoView({behavior: 'smooth', block: 'start'}), 40);
     wireReveals();
-    mainContent?.focus({ preventScroll:true });
-  }
+    mainContent?.focus({preventScroll: true});
+}
 
-  function route() {
-    const hash = location.hash.replace('#','');
+function route() {
+    const hash = location.hash.replace('#', '');
     if (hash.startsWith('tour/')) openTour(hash.split('/')[1], false);
     else {
-      detailView.classList.remove('active');
-      detailView.innerHTML = '';
-      document.body.classList.remove('detail-open');
-      if (hash) setTimeout(() => document.getElementById(hash)?.scrollIntoView(), 10);
+        detailView.classList.remove('active');
+        detailView.innerHTML = '';
+        document.body.classList.remove('detail-open');
+        if (hash) setTimeout(() => document.getElementById(hash)?.scrollIntoView(), 10);
     }
-  }
+}
 
-  function openRandomTour() {
+function openRandomTour() {
     const t = tours[Math.floor(Math.random() * tours.length)];
     openTour(t.id);
-  }
+}
 
-  function showToast(msg) {
+function showToast(msg) {
     const toast = document.getElementById('toast');
     toast.textContent = msg;
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 2200);
-  }
+}
 
-  function closeMenu() {
+function closeMenu() {
     document.body.classList.remove('menu-open');
     menuBtn.setAttribute('aria-expanded', 'false');
     menuBtn.setAttribute('aria-label', 'Open menu');
-  }
+}
 
-  function toggleMenu() {
+function toggleMenu() {
     const isOpen = document.body.classList.toggle('menu-open');
     menuBtn.setAttribute('aria-expanded', String(isOpen));
     menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-  }
+}
 
-  function moveGallery(button, direction) {
+function moveGallery(button, direction) {
     const track = button.closest('.excursion-gallery')?.querySelector('.gallery-track');
     if (!track) return;
-    track.scrollBy({ left: direction * track.clientWidth * .82, behavior:'smooth' });
-  }
+    track.scrollBy({left: direction * track.clientWidth * .82, behavior: 'smooth'});
+}
 
-  function openGalleryModal(button) {
+function openGalleryModal(button) {
     if (!galleryModal || !galleryModalImg) return;
     modalReturnTarget = button;
     galleryModalImg.src = button.dataset.src;
@@ -272,31 +280,38 @@
     galleryModal.classList.add('active');
     galleryModal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
-    galleryModal.querySelector('.modal-close')?.focus({ preventScroll:true });
-  }
+    galleryModal.querySelector('.modal-close')?.focus({preventScroll: true});
+}
 
-  function closeGalleryModal() {
+function closeGalleryModal() {
     if (!galleryModal || !galleryModalImg) return;
     galleryModal.classList.remove('active');
     galleryModal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
     galleryModalImg.removeAttribute('src');
-    modalReturnTarget?.focus({ preventScroll:true });
+    modalReturnTarget?.focus({preventScroll: true});
     modalReturnTarget = null;
-  }
+}
 
-  function wireReveals() {
+function wireReveals() {
     const reveals = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-    }, { threshold:.12 });
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, {threshold: .12});
     reveals.forEach(el => io.observe(el));
-  }
+}
 
-  menuBtn.addEventListener('click', toggleMenu);
-  navLinks?.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMenu(); menuBtn.focus(); } });
-  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', closeMenu));
-  document.addEventListener('click', e => {
+menuBtn.addEventListener('click', toggleMenu);
+navLinks?.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        closeMenu();
+        menuBtn.focus();
+    }
+});
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', closeMenu));
+document.addEventListener('click', e => {
     const actionTarget = e.target.closest('[data-action]');
     if (!actionTarget) return;
     const action = actionTarget.dataset.action;
@@ -307,11 +322,11 @@
     if (action === 'gallery-next') moveGallery(actionTarget, 1);
     if (action === 'open-gallery-modal') openGalleryModal(actionTarget);
     if (action === 'close-gallery-modal') closeGalleryModal();
-  });
-  document.addEventListener('keydown', e => {
+});
+document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && galleryModal?.classList.contains('active')) closeGalleryModal();
-  });
-  searchInput.addEventListener('input', renderCards);
-  window.addEventListener('hashchange', route);
+});
+searchInput.addEventListener('input', renderCards);
+window.addEventListener('hashchange', route);
 
-  initApp();
+initApp();
