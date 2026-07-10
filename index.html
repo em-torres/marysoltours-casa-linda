@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Casa Linda x One Prestige | Dominican Republic Excursions</title>
+<meta name="description" content="A responsive animated excursion website for Casa Linda x One Prestige featuring Paradise Island, Puerto Plata City Tour, Damajagua Falls, Catamaran, ATV, Dune Buggy, Deep-Sea Fishing, Horseback Riding, Laguna Dudu and Ocean World." />
+<link rel="stylesheet" href="assets/main.css?v=20260709-3" />
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><div class="blob a"></div><div class="blob b"></div><div class="blob c"></div></div>
+
+<nav class="navbar" aria-label="Primary navigation">
+  <a class="brand" href="#home" aria-label="Casa Linda x One Prestige home">
+    <span class="brand-logos" aria-hidden="true">
+      <img class="brand-logo brand-logo-casa" src="assets/images/casa-linda.png" alt="" />
+      <span class="brand-divider">x</span>
+      <img class="brand-logo brand-logo-prestige" src="assets/images/one-prestige.jpeg" alt="" />
+    </span>
+    <span class="brand-copy"><strong>Casa Linda x One Prestige</strong><span>Dominican Adventures</span></span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#excursions">Excursions</a>
+  </div>
+  <button class="cta-nav" type="button" onclick="bookTour()">Book now <span>→</span></button>
+  <button class="hamburger" type="button" id="menuBtn" aria-label="Open menu">☰</button>
+</nav>
+
+<main class="page-shell" id="homeView">
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow reveal">Explore • Discover • Experience</div>
+        <h1 class="serif reveal">Adventures <span class="script">that create</span> Memories</h1>
+        <p class="hero-copy reveal">A premium collection of unforgettable Dominican Republic excursions - from turquoise islands and catamaran sailing to off-road thrills, waterfalls, culture, wildlife and family experiences.</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#excursions">Explore excursions <span>↓</span></a>
+          <button class="btn btn-ghost" type="button" onclick="openRandomTour()">Surprise me ✨</button>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Featured experiences preview">
+        <div class="hero-card-img"></div>
+        <div class="stats-row">
+          <div class="stat-pill"><b>10</b><small>Excursions</small></div>
+          <div class="stat-pill"><b>3</b><small>Styles</small></div>
+          <div class="stat-pill"><b>∞</b><small>Memories</small></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <div class="ribbon" aria-hidden="true"><div class="ribbon-track"><span>Ocean</span><span>Nature</span><span>Adventure</span><span>Culture</span><span>Family</span><span>Memories</span><span>Ocean</span><span>Nature</span><span>Adventure</span><span>Culture</span><span>Family</span><span>Memories</span></div></div>
+
+  <section class="section" id="excursions">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-kicker">Your adventure awaits</div>
+          <h2 class="section-title serif">Choose your escape</h2>
+        </div>
+        <p class="section-lead">Filter by experience style, search by destination, and open any excursion for a complete detail page with itinerary, highlights, essential information and what to bring.</p>
+      </div>
+
+      <div class="toolbar reveal">
+        <label class="search" aria-label="Search excursions"><span>🔎</span><input id="searchInput" placeholder="Search beaches, waterfalls, city, snorkeling..." /></label>
+        <div class="filters" id="filters"></div>
+      </div>
+
+      <div class="tour-grid" id="tourGrid"></div>
+    </div>
+  </section>
+
+</main>
+
+<section class="detail-view" id="detailView"></section>
+
+<footer>
+  <div class="container">
+    <div><strong>Casa Linda x One Prestige</strong> • Dominican Republic Excursions</div>
+    <div>Explore • Discover • Experience</div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">Link copied</div>
+
+<script src="assets/main.js?v=20260709-3"></script>
+</body>
+</html>
