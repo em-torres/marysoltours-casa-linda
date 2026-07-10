@@ -1,21 +1,114 @@
-const BOOKING_WHATSAPP = "https://wa.me/18496314461?text=I%20would%20like%20more%20info%20about%20the%20tour%20..."; // Replace with your final booking link.
-  const tours = [{"id": "paradise-island", "order": "01", "title": "Paradise Island", "short": "White sand, turquoise water, coral reefs and protected mangroves at Cayo Arena.", "tagline": "Discover a tropical paradise in the heart of the Caribbean.", "category": "Ocean & Nature", "duration": "8 hours", "group": "Private/Small group", "level": "Easy to Moderate", "destinations": ["Punta Rucia", "Paradise Island (Cayo Arena)", "Mangrove Reserve", "Coral Reef"], "overview": "Escape to one of the Dominican Republic's most breathtaking natural treasures. Journey to Punta Rucia before boarding a boat to Paradise Island, a tiny coral island surrounded by crystal-clear turquoise waters. Snorkel among tropical fish, explore protected mangrove forests and enjoy the untouched beauty of the Caribbean Sea.", "highlights": ["Scenic drive along the North Coast", "Visit Punta Rucia fishing village", "Boat ride to Paradise Island", "Snorkeling in crystal-clear waters", "Explore the mangrove reserve", "Discover tropical marine life", "Dominican lunch included", "Stunning Caribbean views"], "info": ["Excursion days: Monday, Wednesday and Friday", "Lunch: Dominican buffet included", "Transportation: Air-conditioned bus", "Drinks: Water and soft drinks", "Accessibility: Suitable for most guests; moderate physical activity required."], "bring": ["Towel", "Swimsuit", "Sunscreen", "Sunglasses", "Waterproof camera"], "activities": [{"num": "01", "title": "Scenic Drive to Punta Rucia", "text": "Travel along the beautiful northern coastline and arrive at Punta Rucia, a charming fishing village known for peaceful atmosphere and breathtaking ocean views."}, {"num": "02", "title": "Paradise Island & Snorkeling", "text": "Discover Cayo Arena and snorkel among colorful tropical fish, coral formations and diverse marine life in one of the Caribbean's most beautiful natural environments."}, {"num": "03", "title": "Mangrove Eco Tour", "text": "Explore protected mangrove forests, birds, fish, crabs and native wildlife while enjoying a relaxing boat ride through nature."}], "heroImage": "assets/images/paradise-island-hero.jpg", "gallery": ["assets/images/paradise-island-gallery-01.jpg", "assets/images/paradise-island-gallery-02.jpg", "assets/images/paradise-island-gallery-03.jpg"]}, {"id": "puerto-plata-city-tour", "order": "02", "title": "Puerto Plata City Tour", "short": "History, culture, colorful streets, panoramic viewpoints and authentic local charm.", "tagline": "Discover the history, culture and charm of the Dominican Republic's North Coast.", "category": "Culture", "duration": "4-5 hours", "group": "2-30 people", "level": "Easy", "destinations": ["Isabel de Torres Mountain", "Amber Museum", "San Felipe Fortress", "Central Park", "Umbrella Street", "Pink Street"], "overview": "Explore the highlights of Puerto Plata, one of the Dominican Republic's most historic and colorful cities. Visit iconic landmarks, stroll through charming colonial streets, admire panoramic views and discover local traditions, shopping and scenery.", "highlights": ["Visit Isabel de Torres Mountain", "Christ the Redeemer statue", "Panoramic city and ocean views", "Explore historic Puerto Plata", "Visit Umbrella Street", "Walk through Pink Street", "San Felipe Fortress visit", "Local shopping and souvenirs"], "info": ["Lunch: Dominican buffet included", "Professional guide: Included", "Entrance fees: Included", "Accessibility: Suitable for guests of all ages and most fitness levels."], "bring": ["Comfortable shoes", "Sunglasses", "Sunscreen", "Hat", "Camera", "Extra cash for souvenirs"], "activities": [{"num": "01", "title": "Isabel de Torres Mountain", "text": "Travel to Puerto Plata's famous landmark for panoramic views of the city, coastline and mountains, plus botanical gardens and the Christ the Redeemer statue."}, {"num": "02", "title": "Historic Downtown & Cultural Landmarks", "text": "Explore the historic center, Victorian architecture, lively atmosphere, Umbrella Street and Pink Street."}, {"num": "03", "title": "San Felipe Fortress & Local Shopping", "text": "Visit the colonial fortress and browse Dominican amber, larimar jewelry, coffee, rum, cigars and handcrafted souvenirs."}], "heroImage": "assets/images/puerto-plata-city-tour-hero.jpg", "gallery": ["assets/images/puerto-plata-city-tour-gallery-01.jpg", "assets/images/puerto-plata-city-tour-gallery-02.jpg", "assets/images/puerto-plata-city-tour-gallery-03.jpg"]}, {"id": "jeep-safari-damajagua", "order": "03", "title": "Jeep Safari + Damajagua Falls", "short": "Open-air safari, rural villages, tropical forest and the famous Damajagua waterfalls.", "tagline": "The ultimate off-road and waterfall adventure in Puerto Plata.", "category": "Adventure", "duration": "8 hours", "group": "2-30 people", "level": "Moderate to Challenging", "destinations": ["Damajagua Waterfalls", "Dominican Countryside", "Rural Villages", "Tropical Forest"], "overview": "Experience the perfect combination of adventure, nature and Dominican culture. Travel by open-air safari jeep through the lush countryside, visit authentic rural communities and discover the world-famous Damajagua Waterfalls. Climb, jump, slide and swim through natural waterfalls before a traditional Dominican lunch.", "highlights": ["Open-air jeep safari", "Visit Damajagua Waterfalls", "Natural water slides and cliff jumps", "Swim in crystal-clear pools", "Explore Dominican villages", "Tropical forest adventure", "Authentic Dominican lunch", "Professional adventure guides"], "info": ["Excursion day: Everyday, if available", "Pick-up time: 8:20 AM", "Lunch: Fish, chicken, rice, eggplant and salads", "Transportation: Air-conditioned bus or jeep safari", "Optional additions: Monkey or Zip Line tours, additional payment", "Accessibility: Not recommended for wheelchair users due to multiple stairs."], "bring": ["Towel", "Swimsuit", "Sunscreen", "Non-slip shoes"], "activities": [{"num": "01", "title": "Damajagua Waterfalls Adventure", "text": "Hike through tropical forest before sliding, jumping and swimming through crystal-clear waterfalls and natural pools under certified guide supervision."}, {"num": "02", "title": "Jungle Jeep Safari", "text": "Ride through countryside, villages, plantations, rivers and mountain landscapes while learning about local culture and traditions."}, {"num": "03", "title": "Dominican Lunch & Scenic Views", "text": "Relax after your adventure with a traditional Dominican lunch and unforgettable memories of Puerto Plata's natural beauty."}], "heroImage": "assets/images/jeep-safari-damajagua-hero.jpg", "gallery": ["assets/images/jeep-safari-damajagua-gallery-01.jpg", "assets/images/jeep-safari-damajagua-gallery-02.jpg", "assets/images/jeep-safari-damajagua-gallery-03.jpg"]}, {"id": "catamaran", "order": "04", "title": "Catamaran", "short": "Sail, swim, snorkel, dance and celebrate along Puerto Plata's turquoise coastline.", "tagline": "Sail, swim and celebrate in the turquoise waters of Puerto Plata.", "category": "Ocean & Party", "duration": "4 hours", "group": "10-60 people", "level": "Easy", "destinations": ["Puerto Plata Bay", "Coral Reef Area", "Snorkeling Site", "Open Caribbean Waters"], "overview": "Step aboard a spacious catamaran and enjoy a Caribbean adventure along Puerto Plata's coastline. Relax under the sun, snorkel in crystal-clear waters, dance to tropical music and enjoy refreshing drinks while taking in breathtaking ocean views.", "highlights": ["Luxury catamaran experience", "Snorkeling adventure", "Open bar onboard", "Music and entertainment", "Panoramic coastal views", "Swimming stops", "Friendly crew", "Relaxing Caribbean atmosphere"], "info": ["Open bar: Included", "Snorkeling equipment: Included", "Transportation: Air-conditioned bus", "Accessibility: Suitable for most guests and families; requires boarding a catamaran and walking on moving surfaces."], "bring": ["Towel", "Swimsuit", "Sunscreen", "Sunglasses", "Waterproof phone case", "Extra cash, optional"], "activities": [{"num": "01", "title": "Coastal Sailing Experience", "text": "Set sail along Puerto Plata's coastline and admire mountain, beach and Caribbean Sea views while enjoying fresh ocean breezes."}, {"num": "02", "title": "Snorkeling Adventure", "text": "Dive into crystal-clear waters and discover tropical fish, coral formations and vibrant marine life with provided snorkeling equipment."}, {"num": "03", "title": "Caribbean Party Onboard", "text": "Enjoy music, dancing, drinks and a lively atmosphere while cruising across turquoise waters."}], "heroImage": "assets/images/catamaran-hero.jpg", "gallery": ["assets/images/catamaran-gallery-01.jpg", "assets/images/catamaran-gallery-02.jpg", "assets/images/catamaran-gallery-03.jpg"]}, {"id": "dune-buggy", "order": "05", "title": "Dune Buggy Tour", "short": "Drive your own buggy through off-road trails, villages, beaches and Dominican countryside.", "tagline": "Experience the Dominican countryside like never before.", "category": "Off-Road", "duration": "2.5-3 hours", "group": "Private/Small group", "level": "Moderate", "destinations": ["Dominican Countryside", "Local Villages", "Off-Road Trails", "Beach Stop"], "overview": "Get ready for an exciting off-road adventure through Puerto Plata's countryside. Drive your own dune buggy along scenic trails, discover communities, visit hidden beaches and experience authentic Dominican lifestyle. Expect mud, adventure, landscapes and unforgettable memories.", "highlights": ["Drive your own dune buggy", "Off-road adventure trails", "Explore local communities", "Visit a beautiful beach", "Scenic countryside views", "Family-friendly experience", "Fun and adventure guaranteed", "Perfect photo opportunities"], "info": ["Excursion day: Every day, mornings or afternoons", "Equipment: Helmet and safety instructions included", "Driver requirement: Valid driver's license required to operate the buggy", "Transportation: Open-air jeep", "Accessibility: Moderate mobility required; uneven terrain."], "bring": ["Comfortable clothes", "Towel", "Swimsuit", "Sunscreen", "Extra clothes recommended", "Waterproof phone case", "Closed-toe shoes"], "activities": [{"num": "01", "title": "Off-Road Dune Buggy Adventure", "text": "Take the wheel through rugged trails, dirt roads and tropical landscapes. Get ready to get a little muddy."}, {"num": "02", "title": "Dominican Countryside Experience", "text": "Travel through villages and discover rural Dominican life, culture and spectacular views along the way."}, {"num": "03", "title": "Beach Stop & Relaxation", "text": "Pause at a beautiful beach for photos, ocean breeze and a refreshing break before heading back."}], "heroImage": "assets/images/dune-buggy-hero.jpg", "gallery": ["assets/images/dune-buggy-gallery-01.jpg", "assets/images/dune-buggy-gallery-02.jpg", "assets/images/dune-buggy-gallery-03.jpg"]}, {"id": "atv-adventure", "order": "06", "title": "ATV Adventure", "short": "Ride through dirt roads, tropical trails, local villages and beautiful beach stops.", "tagline": "Ride through Puerto Plata's most spectacular landscapes.", "category": "Off-Road", "duration": "2.5-3 hours", "group": "Private/Small group", "level": "Moderate", "destinations": ["Dominican Countryside", "Local Villages", "Tropical Trails", "Beach Stop"], "overview": "Experience the thrill of riding an all-terrain vehicle through Dominican countryside. Travel along dirt roads, tropical trails and scenic paths while discovering local villages, natural scenery and hidden coastal treasures. This adventure combines adrenaline, culture and breathtaking views.", "highlights": ["Drive your own ATV", "Exciting off-road trails", "Visit local communities", "Beautiful beach stop", "Scenic countryside views", "Authentic Dominican experience", "Professional guides", "Amazing photo opportunities"], "info": ["Excursion day: Every day, mornings or afternoons", "Equipment: Helmet and safety instructions included", "Driver requirement: Valid driver's license required", "Transportation: Open-air jeep", "Accessibility: Participants must be able to operate or ride on an ATV and navigate uneven terrain."], "bring": ["Towel", "Swimsuit", "Sunscreen", "Comfortable clothing", "Closed-toe shoes", "Sunglasses", "Waterproof phone case", "Additional change of clothes"], "activities": [{"num": "01", "title": "ATV Off-Road Adventure", "text": "Take control of your ATV and ride through dirt roads, tropical trails and rugged terrain from a completely different perspective."}, {"num": "02", "title": "Discover Dominican Culture", "text": "Pass through local communities and rural landscapes while learning about traditions and daily life."}, {"num": "03", "title": "Beach Escape", "text": "Relax at a beautiful beach stop, enjoy the breeze and capture photos of the North Coast."}], "heroImage": "assets/images/atv-adventure-hero.jpg", "gallery": ["assets/images/atv-adventure-gallery-01.jpg", "assets/images/atv-adventure-gallery-02.jpg", "assets/images/atv-adventure-gallery-03.jpg"]}, {"id": "deep-sea-fishing", "order": "07", "title": "Deep-Sea Fishing", "short": "Private charter fishing in the Atlantic with professional crew, equipment and ocean views.", "tagline": "An unforgettable offshore fishing adventure in the Atlantic Ocean.", "category": "Ocean & Sport", "duration": "4 hours", "group": "Private charter up to 6 guests", "level": "Easy", "destinations": ["Puerto Plata Marina", "Atlantic Ocean", "Offshore Fishing Grounds"], "overview": "Experience deep-sea fishing off Puerto Plata's coast. Whether experienced or trying it for the first time, the professional crew guides you to top fishing grounds. Enjoy time on the open ocean while targeting game fish and taking in Caribbean views.", "highlights": ["Private fishing charter", "Professional captain and crew", "Premium fishing equipment included", "Opportunity to catch trophy fish", "Spectacular ocean views", "Complimentary drinks", "Ideal for beginners and experienced anglers", "Relaxing Caribbean experience"], "info": ["Fishing equipment: Included", "Professional crew: Included", "Transportation: Air-conditioned bus", "Drinks: Water and soft drinks", "Accessibility: Participants should be comfortable boarding a boat and spending several hours at sea."], "bring": ["Sunglasses", "Hat", "Sunscreen", "Comfortable clothing", "Non-slip shoes", "Camera", "Motion sickness medication, if needed"], "activities": [{"num": "01", "title": "Offshore Fishing Adventure", "text": "Head into deep Atlantic waters aboard a fully equipped fishing boat with an experienced local captain and crew."}, {"num": "02", "title": "Catch Trophy Fish", "text": "Depending on season, target species such as Mahi-Mahi, Wahoo, Tuna, Barracuda, Blue Marlin and White Marlin."}, {"num": "03", "title": "Relax & Enjoy the Caribbean", "text": "Even non-anglers love the coastal views, fresh sea breeze and peaceful open-ocean atmosphere."}], "heroImage": "assets/images/deep-sea-fishing-hero.jpg", "gallery": ["assets/images/deep-sea-fishing-gallery-01.jpg", "assets/images/deep-sea-fishing-gallery-02.jpg", "assets/images/deep-sea-fishing-gallery-03.jpg"]}, {"id": "horseback-riding", "order": "08", "title": "Horseback Riding", "short": "Ride through jungle, villages, rivers, beaches and a natural lagoon with friendly guides.", "tagline": "Ride through the Dominican countryside, jungle, rivers and pristine beaches.", "category": "Nature & Culture", "duration": "4 hours", "group": "2-20 people", "level": "Easy to Moderate", "destinations": ["Private Ranch", "Dominican Villages", "Tropical Forest", "Rivers", "Dominican Beaches"], "overview": "Experience the Dominican Republic from a unique perspective as you ride through tropical forests, peaceful villages, scenic rivers and untouched beaches. Friendly guides and well-trained horses make it suitable for first-time riders and experienced guests.", "highlights": ["Guided horseback riding adventure", "Ride through tropical jungle", "Cross rivers and scenic trails", "Visit authentic Dominican villages", "Gallop along a beautiful beach", "Swim in a natural lagoon", "Breathtaking ocean views", "Suitable for beginners and experienced riders"], "info": ["Professional guides: Included", "Helmet: Included", "Transportation: Air-conditioned bus", "Accessibility: Suitable for most guests with basic mobility; no previous riding experience required.", "Not recommended for wheelchair users, pregnant women, serious back/neck/joint conditions or severe mobility limitations."], "bring": ["Towel", "Swimsuit", "Sunscreen", "Sunglasses", "Camera", "Insect repellent", "Water shoes or sport sandals", "Comfortable clothing"], "activities": [{"num": "01", "title": "Beach & Lagoon Experience", "text": "Ride across sugarcane fields to the beach, take photos and cool off with a refreshing swim in a natural lagoon."}, {"num": "02", "title": "Horses for Every Rider", "text": "Gentle, healthy horses and bilingual guides help beginners and experienced riders feel comfortable and confident."}, {"num": "03", "title": "Ride Through the Countryside", "text": "Begin at a private ranch before riding through tropical vegetation, rivers and Dominican villages."}], "heroImage": "assets/images/horseback-riding-hero.jpg", "gallery": ["assets/images/horseback-riding-gallery-01.jpg", "assets/images/horseback-riding-gallery-02.jpg", "assets/images/horseback-riding-gallery-03.jpg"]}, {"id": "laguna-dudu-gri-gri-playa-caleton", "order": "09", "title": "Laguna Dudu + Laguna Gri Gri + Playa Caleton", "short": "A full day of blue lagoons, mangroves, fruit plantation and beaches on the North Coast.", "tagline": "Explore the hidden treasures of the Dominican Republic's North Coast.", "category": "Nature & Beach", "duration": "8 hours", "group": "2-30 people", "level": "Moderate", "destinations": ["Fruit Plantation", "Dudu Blue Lagoon", "Caleton Beach", "Playa Grande Beach", "Gri-Gri Lagoon"], "overview": "Spend a full day discovering some of the most spectacular natural attractions along the northern coastline. Visit a tropical fruit plantation, swim in blue lagoons, admire breathtaking beaches and explore Gri Gri Lagoon surrounded by mangroves and wildlife.", "highlights": ["Tropical fruit plantation", "Seasonal fruit tasting", "Swim in crystal-clear lagoons", "Visit Caleton Beach", "Scenic stop at Playa Grande", "Boat ride at Gri Gri Lagoon", "Dominican lunch included", "Wildlife and mangrove exploration"], "info": ["Excursion day: Tuesday", "Pick-up time: 9:10 AM", "Lunch: Fish, chicken, rice, eggplant and salads", "Transportation: Air-conditioned bus", "Drinks: Water and soft drinks", "Accessibility: Not recommended for wheelchair users due to multiple stairs at the lagoon."], "bring": ["Towel", "Swimsuit", "Sunscreen"], "activities": [{"num": "01", "title": "Playa Caleton & Gri-Gri Lagoon", "text": "Admire Playa Caleton before exploring Gri Gri Lagoon, a natural paradise filled with mangroves, birds and aquatic wildlife."}, {"num": "02", "title": "Dudu Blue Lagoon", "text": "Swim in crystal-clear turquoise freshwater surrounded by lush tropical vegetation and incredible blue color."}, {"num": "03", "title": "Tropical Fruit Plantation and More", "text": "Visit a local fruit plantation, enjoy seasonal tropical fruits and learn about Dominican agriculture."}], "heroImage": "assets/images/laguna-dudu-gri-gri-playa-caleton-hero.jpg", "gallery": ["assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-01.jpg", "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-02.jpg", "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-03.jpg"]}, {"id": "ocean-world", "order": "10", "title": "Ocean World Adventure Park", "short": "Marine animal shows, aquariums, tropical gardens, optional animal encounters and family fun.", "tagline": "A day of marine encounters, exciting shows and unforgettable family fun.", "category": "Family & Marine", "duration": "5-6 hours", "group": "2-30 people", "level": "Easy", "destinations": ["Ocean World Marine Park", "Dolphin Habitat", "Tropical Bird Aviary", "Aquarium", "Shark & Sea Lion Areas"], "overview": "Spend an incredible day at Ocean World Adventure Park, Puerto Plata's premier marine attraction. Discover marine life, enjoy animal shows, relax in tropical surroundings and create family memories with dolphins, sea lions, tropical birds and sharks.", "highlights": ["Visit Ocean World Marine Park", "Dolphin, sea lion and tropical bird shows", "Aquarium and marine exhibits", "Snorkeling lagoon access", "Tropical gardens", "Family-friendly experience", "Optional animal encounters", "Perfect for all ages"], "info": ["Animal encounters: Optional, additional cost", "Transportation: Air-conditioned bus", "Accessibility: Suitable for all ages and most mobility levels; most areas are paved.", "Wheelchair accessible: Most facilities are wheelchair friendly.", "Special assistance: Please inform in advance if required."], "bring": ["Towel", "Swimsuit", "Sunscreen", "Comfortable clothing", "Sunglasses", "Camera", "Extra cash for optional activities and souvenirs"], "activities": [{"num": "01", "title": "Marine Animal Shows", "text": "Enjoy educational presentations featuring dolphins, sea lions, tropical birds and fascinating marine animals."}, {"num": "02", "title": "Explore the Marine Park", "text": "Walk through tropical gardens, aquariums, bird habitats, shark exhibits and interactive marine displays."}, {"num": "03", "title": "Optional Animal Encounters", "text": "Upgrade with experiences such as swimming with dolphins, interacting with sea lions or snorkeling in the reef aquarium."}], "heroImage": "assets/images/ocean-world-hero.jpg", "gallery": ["assets/images/ocean-world-gallery-01.jpg", "assets/images/ocean-world-gallery-02.jpg", "assets/images/ocean-world-gallery-03.jpg"]}];
+  let tours = [];
   const grid = document.getElementById('tourGrid');
   const filtersEl = document.getElementById('filters');
   const searchInput = document.getElementById('searchInput');
   const detailView = document.getElementById('detailView');
   const homeView = document.getElementById('homeView');
   const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  const mainContent = document.getElementById('main-content');
   const hero = document.getElementById('home');
+  const heroPreview = document.getElementById('heroPreview');
+  const galleryModal = document.getElementById('galleryModal');
+  const galleryModalImg = document.getElementById('galleryModalImg');
   let activeCategory = 'All';
+  let heroSlideIndex = 0;
+  let heroSlideshowTimer;
+  let heroSlideshowPaused = false;
+  let heroFadeTimer;
+  let modalReturnTarget;
+  let categories = ['All'];
+  let heroSlides = [];
 
-  const categories = ['All', ...Array.from(new Set(tours.map(t => t.category.split(' & ')[0]).filter(Boolean)))];
   const assetUrl = path => new URL(path, document.baseURI).href;
   const cssImage = path => `url(${assetUrl(path)})`;
-  hero?.style.setProperty('--cover', cssImage('assets/images/home-hero.jpg'));
+  const attr = value => String(value).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+
+  async function loadTours() {
+    const response = await fetch('assets/tours.json', { cache:'no-cache' });
+    if (!response.ok) throw new Error(`Unable to load tours.json (${response.status})`);
+    tours = await response.json();
+  }
+
+  function buildDerivedData() {
+    activeCategory = 'All';
+    categories = ['All', ...Array.from(new Set(tours.map(t => t.category.split(' & ')[0]).filter(Boolean)))];
+    heroSlides = [
+      { src:'assets/images/home-hero.jpg', label:'Dominican Republic adventure collage' },
+      ...tours.flatMap(t => [
+        { src:t.heroImage, label:t.title },
+        ...t.gallery.map((src, index) => ({ src, label:`${t.title} activity ${index + 1}` }))
+      ])
+    ];
+    setHeroSlide(0);
+  }
+
+  async function initApp() {
+    try {
+      await loadTours();
+      buildDerivedData();
+      startHeroSlideshow();
+      initFilters();
+      renderCards();
+      wireReveals();
+      route();
+    } catch (error) {
+      console.error(error);
+      grid.innerHTML = `<div class="info-card" style="grid-column:1/-1"><h3>Excursions could not load</h3><p>Please refresh the page and try again.</p></div>`;
+      showToast('Excursions could not load');
+    }
+  }
+
+  function setHeroSlide(index) {
+    if (!hero || !heroSlides.length) return;
+    heroSlideIndex = (index + heroSlides.length) % heroSlides.length;
+    const slide = heroSlides[heroSlideIndex];
+    hero.style.setProperty('--cover', cssImage(slide.src));
+    hero.style.setProperty('--cover-next', cssImage(slide.src));
+    heroPreview?.setAttribute('aria-label', slide.label);
+  }
+
+  function transitionHeroSlide(index) {
+    if (!hero || !heroSlides.length) return;
+    const nextIndex = (index + heroSlides.length) % heroSlides.length;
+    const slide = heroSlides[nextIndex];
+    const nextImage = cssImage(slide.src);
+    window.clearTimeout(heroFadeTimer);
+    heroSlideIndex = nextIndex;
+    hero.style.setProperty('--cover-next', nextImage);
+    heroPreview?.setAttribute('aria-label', slide.label);
+    hero.classList.add('is-fading');
+    heroFadeTimer = window.setTimeout(() => {
+      hero.style.setProperty('--cover', nextImage);
+      hero.classList.remove('is-fading');
+    }, 900);
+  }
+
+  function randomHeroSlide() {
+    if (heroSlides.length < 2) return;
+    let nextIndex = heroSlideIndex;
+    while (nextIndex === heroSlideIndex) {
+      nextIndex = Math.floor(Math.random() * heroSlides.length);
+    }
+    transitionHeroSlide(nextIndex);
+  }
+
+  function startHeroSlideshow() {
+    window.clearInterval(heroSlideshowTimer);
+    heroSlideshowTimer = window.setInterval(() => {
+      if (!heroSlideshowPaused) randomHeroSlide();
+    }, 5000);
+  }
+
+  function toggleHeroSlideshow(button) {
+    heroSlideshowPaused = !heroSlideshowPaused;
+    button.setAttribute('aria-pressed', String(heroSlideshowPaused));
+    button.setAttribute('aria-label', heroSlideshowPaused ? 'Resume image slideshow' : 'Pause image slideshow');
+    button.textContent = heroSlideshowPaused ? '▶' : 'Ⅱ';
+  }
 
   function initFilters() {
-    filtersEl.innerHTML = categories.map(cat => `<button class="filter-btn ${cat === activeCategory ? 'active' : ''}" type="button" data-category="${cat}">${cat}</button>`).join('');
+    filtersEl.innerHTML = categories.map(cat => `<button class="filter-btn ${cat === activeCategory ? 'active' : ''}" type="button" data-category="${cat}" aria-pressed="${cat === activeCategory}">${cat}</button>`).join('');
     filtersEl.querySelectorAll('button').forEach(btn => btn.addEventListener('click', () => {
       activeCategory = btn.dataset.category;
       initFilters();
@@ -24,7 +117,7 @@ const BOOKING_WHATSAPP = "https://wa.me/18496314461?text=I%20would%20like%20more
   }
 
   function cardTemplate(t) {
-    return `<article class="tour-card" style="--img:${cssImage(t.heroImage)}" data-id="${t.id}" tabindex="0" role="button" aria-label="Open ${t.title}">
+    return `<a class="tour-card" href="#tour/${attr(t.id)}" style="--img:${cssImage(t.heroImage)}" aria-label="Open details for ${attr(t.title)}">
       <div class="card-topline"><span class="order-badge">${t.order}</span><span class="category-badge">${t.category}</span></div>
       <div class="tour-card-content">
         <div class="mini-meta"><span>${t.duration}</span><span>${t.level}</span></div>
@@ -32,7 +125,7 @@ const BOOKING_WHATSAPP = "https://wa.me/18496314461?text=I%20would%20like%20more
         <p>${t.short}</p>
         <div class="card-actions"><span class="view-link">View details <span class="arrow">→</span></span></div>
       </div>
-    </article>`;
+    </a>`;
   }
 
   function renderCards() {
@@ -42,11 +135,9 @@ const BOOKING_WHATSAPP = "https://wa.me/18496314461?text=I%20would%20like%20more
       const haystack = [t.title, t.short, t.category, t.tagline, ...t.destinations, ...t.highlights].join(' ').toLowerCase();
       return categoryOk && (!q || haystack.includes(q));
     });
+    grid.setAttribute('aria-live', q ? 'polite' : 'off');
     grid.innerHTML = filtered.length ? filtered.map(cardTemplate).join('') : `<div class="info-card" style="grid-column:1/-1"><h3>No excursions found</h3><p>Try a different search or select All.</p></div>`;
     grid.querySelectorAll('.tour-card').forEach((card, index) => {
-      const open = () => openTour(card.dataset.id);
-      card.addEventListener('click', open);
-      card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
       requestAnimationFrame(() => setTimeout(() => card.classList.add('show'), 70 * index));
     });
   }
@@ -54,17 +145,21 @@ const BOOKING_WHATSAPP = "https://wa.me/18496314461?text=I%20would%20like%20more
   function list(items, cls = '') { return `<ul class="${cls}">${items.map(i => `<li>${i}</li>`).join('')}</ul>`; }
 
   function detailTemplate(t) {
-    const otherTours = tours.filter(x => x.id !== t.id).slice(0, 8).map(x => `<a class="mini-tour" href="#tour/${x.id}" style="--img:${cssImage(x.heroImage)}"><span>${x.title}</span></a>`).join('');
+    const otherTours = tours.filter(x => x.id !== t.id).slice(0, 8).map(x => `<a class="mini-tour" href="#tour/${attr(x.id)}" style="--img:${cssImage(x.heroImage)}" aria-label="Open details for ${attr(x.title)}"><span>${x.title}</span></a>`).join('');
     const activities = t.activities.map((a, i) => `<article class="activity-card reveal"><img src="${assetUrl(t.gallery[i])}" alt="${a.title}"><div class="activity-body"><div class="activity-num">${a.num}</div><h3 class="serif">${a.title}</h3><p>${a.text}</p></div></article>`).join('');
+    const gallery = t.gallery.map((src, i) => {
+      const imageUrl = assetUrl(src);
+      const alt = `${t.title} gallery image ${i + 1}`;
+      return `<button class="gallery-slide" type="button" data-action="open-gallery-modal" data-src="${attr(imageUrl)}" data-alt="${attr(alt)}" aria-label="Open ${attr(alt)}"><img src="${imageUrl}" alt="${attr(alt)}" loading="lazy"></button>`;
+    }).join('');
     return `
-      <button class="back-btn" type="button" onclick="goHome()">← All excursions</button>
+      <button class="back-btn" type="button" data-action="all-excursions">← All excursions</button>
       <section class="detail-hero" style="--hero:${cssImage(t.heroImage)}">
         <div class="detail-hero-content">
           <div>
             <div class="eyebrow reveal">${t.category}</div>
             <h1 class="serif reveal">${t.title}</h1>
             <p class="reveal">${t.tagline}</p>
-            <div class="hero-actions reveal"><button class="btn btn-primary" type="button" onclick="bookTour('${t.title}')">Book this adventure →</button><a class="btn btn-ghost" href="#activities">View activities ↓</a></div>
           </div>
           <aside class="detail-panel reveal">
             <div class="detail-stat-grid">
@@ -81,12 +176,25 @@ const BOOKING_WHATSAPP = "https://wa.me/18496314461?text=I%20would%20like%20more
           <article class="info-card reveal"><div class="section-kicker">Overview</div><h2 class="serif">Get to know the experience</h2><p>${t.overview}</p></article>
           <aside class="info-card reveal"><h3 class="serif">Destinations</h3>${list(t.destinations, 'pill-list')}</aside>
         </div>
-        <div class="detail-layout">
+        <div class="detail-layout detail-layout-three">
           <article class="info-card reveal"><h3 class="serif">Tour highlights</h3>${list(t.highlights, 'check-list')}</article>
-          <article class="info-card reveal"><h3 class="serif">Essential information</h3><div class="essential-grid"><div class="essential-card">${list(t.info)}</div><div class="essential-card"><h3 class="serif" style="font-size:1.2rem">Bring</h3>${list(t.bring)}</div></div></article>
+          <article class="info-card reveal"><h3 class="serif">Essential information</h3>${list(t.info, 'detail-list')}</article>
+          <article class="info-card reveal"><h3 class="serif">Bring</h3>${list(t.bring, 'detail-list')}</article>
         </div>
-        <article class="info-card reveal" id="activities"><div class="section-kicker">Experiences that create lasting memories</div><h2 class="serif">Your tour activities</h2></article>
+        <article class="info-card reveal activities-heading" id="activities"><div class="section-kicker">Experiences that create lasting memories</div><h2 class="serif">Your tour activities</h2></article>
         <section class="activity-grid">${activities}</section>
+        <section class="excursion-gallery reveal" aria-label="${attr(t.title)} image gallery">
+          <div class="gallery-head">
+            <div><div class="section-kicker">Inside the experience</div><h2 class="serif">Excursion gallery</h2></div>
+            <div class="gallery-controls" aria-label="Gallery controls">
+              <button type="button" data-action="gallery-prev" aria-label="Previous gallery images">←</button>
+              <button type="button" data-action="gallery-next" aria-label="Next gallery images">→</button>
+            </div>
+          </div>
+          <div class="gallery-carousel">
+            <div class="gallery-track" tabindex="0">${gallery}</div>
+          </div>
+        </section>
         <article class="info-card reveal" style="margin-top:24px"><h3 class="serif">More excursions</h3><div class="next-tours">${otherTours}</div></article>
       </div>`;
   }
@@ -95,21 +203,24 @@ const BOOKING_WHATSAPP = "https://wa.me/18496314461?text=I%20would%20like%20more
     const t = tours.find(x => x.id === id);
     if (!t) return goHome(false);
     detailView.innerHTML = detailTemplate(t);
-    homeView.style.display = 'none';
+    document.body.classList.add('detail-open');
     detailView.classList.add('active');
-    document.body.classList.remove('menu-open');
+    closeMenu();
     if (push) location.hash = `tour/${id}`;
     window.scrollTo(0,0);
     wireReveals();
+    detailView.querySelector('h1')?.setAttribute('tabindex', '-1');
+    detailView.querySelector('h1')?.focus({ preventScroll:true });
   }
 
   function goHome(push = true) {
     detailView.classList.remove('active');
     detailView.innerHTML = '';
-    homeView.style.display = '';
+    document.body.classList.remove('detail-open');
     if (push) location.hash = 'excursions';
     setTimeout(() => document.getElementById('excursions')?.scrollIntoView({behavior:'smooth', block:'start'}), 40);
     wireReveals();
+    mainContent?.focus({ preventScroll:true });
   }
 
   function route() {
@@ -118,14 +229,9 @@ const BOOKING_WHATSAPP = "https://wa.me/18496314461?text=I%20would%20like%20more
     else {
       detailView.classList.remove('active');
       detailView.innerHTML = '';
-      homeView.style.display = '';
+      document.body.classList.remove('detail-open');
       if (hash) setTimeout(() => document.getElementById(hash)?.scrollIntoView(), 10);
     }
-  }
-
-  function bookTour(tourName='') {
-    const url = tourName ? `${BOOKING_WHATSAPP}%20${encodeURIComponent(tourName)}` : BOOKING_WHATSAPP;
-    window.open(url, '_blank', 'noopener,noreferrer');
   }
 
   function openRandomTour() {
@@ -140,6 +246,45 @@ const BOOKING_WHATSAPP = "https://wa.me/18496314461?text=I%20would%20like%20more
     setTimeout(() => toast.classList.remove('show'), 2200);
   }
 
+  function closeMenu() {
+    document.body.classList.remove('menu-open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', 'Open menu');
+  }
+
+  function toggleMenu() {
+    const isOpen = document.body.classList.toggle('menu-open');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+    menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  }
+
+  function moveGallery(button, direction) {
+    const track = button.closest('.excursion-gallery')?.querySelector('.gallery-track');
+    if (!track) return;
+    track.scrollBy({ left: direction * track.clientWidth * .82, behavior:'smooth' });
+  }
+
+  function openGalleryModal(button) {
+    if (!galleryModal || !galleryModalImg) return;
+    modalReturnTarget = button;
+    galleryModalImg.src = button.dataset.src;
+    galleryModalImg.alt = button.dataset.alt || 'Excursion gallery image';
+    galleryModal.classList.add('active');
+    galleryModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    galleryModal.querySelector('.modal-close')?.focus({ preventScroll:true });
+  }
+
+  function closeGalleryModal() {
+    if (!galleryModal || !galleryModalImg) return;
+    galleryModal.classList.remove('active');
+    galleryModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    galleryModalImg.removeAttribute('src');
+    modalReturnTarget?.focus({ preventScroll:true });
+    modalReturnTarget = null;
+  }
+
   function wireReveals() {
     const reveals = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries) => {
@@ -148,12 +293,25 @@ const BOOKING_WHATSAPP = "https://wa.me/18496314461?text=I%20would%20like%20more
     reveals.forEach(el => io.observe(el));
   }
 
-  menuBtn.addEventListener('click', () => document.body.classList.toggle('menu-open'));
-  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => document.body.classList.remove('menu-open')));
+  menuBtn.addEventListener('click', toggleMenu);
+  navLinks?.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMenu(); menuBtn.focus(); } });
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('click', e => {
+    const actionTarget = e.target.closest('[data-action]');
+    if (!actionTarget) return;
+    const action = actionTarget.dataset.action;
+    if (action === 'random-tour') openRandomTour();
+    if (action === 'all-excursions') goHome();
+    if (action === 'toggle-hero-slideshow') toggleHeroSlideshow(actionTarget);
+    if (action === 'gallery-prev') moveGallery(actionTarget, -1);
+    if (action === 'gallery-next') moveGallery(actionTarget, 1);
+    if (action === 'open-gallery-modal') openGalleryModal(actionTarget);
+    if (action === 'close-gallery-modal') closeGalleryModal();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && galleryModal?.classList.contains('active')) closeGalleryModal();
+  });
   searchInput.addEventListener('input', renderCards);
   window.addEventListener('hashchange', route);
 
-  initFilters();
-  renderCards();
-  wireReveals();
-  route();
+  initApp();

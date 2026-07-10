@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Casa Linda x One Prestige | Dominican Republic Excursions</title>
 <meta name="description" content="A responsive animated excursion website for Casa Linda x One Prestige featuring Paradise Island, Puerto Plata City Tour, Damajagua Falls, Catamaran, ATV, Dune Buggy, Deep-Sea Fishing, Horseback Riding, Laguna Dudu and Ocean World." />
-<link rel="stylesheet" href="assets/main.css?v=20260709-3" />
+<link rel="stylesheet" href="assets/main.css?v=20260709-22" />
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="ambient" aria-hidden="true"><div class="blob a"></div><div class="blob b"></div><div class="blob c"></div></div>
 
 <nav class="navbar" aria-label="Primary navigation">
@@ -23,12 +24,13 @@
     <a href="#home">Home</a>
     <a href="#excursions">Excursions</a>
   </div>
-  <button class="cta-nav" type="button" onclick="bookTour()">Book now <span>→</span></button>
-  <button class="hamburger" type="button" id="menuBtn" aria-label="Open menu">☰</button>
+  <button class="hamburger" type="button" id="menuBtn" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">☰</button>
 </nav>
 
-<main class="page-shell" id="homeView">
+<main class="page-shell" id="main-content" tabindex="-1">
+<div id="homeView">
   <section class="hero" id="home">
+    <div class="hero-fade" aria-hidden="true"></div>
     <div class="hero-inner">
       <div>
         <div class="eyebrow reveal">Explore • Discover • Experience</div>
@@ -36,11 +38,12 @@
         <p class="hero-copy reveal">A premium collection of unforgettable Dominican Republic excursions - from turquoise islands and catamaran sailing to off-road thrills, waterfalls, culture, wildlife and family experiences.</p>
         <div class="hero-actions reveal">
           <a class="btn btn-primary" href="#excursions">Explore excursions <span>↓</span></a>
-          <button class="btn btn-ghost" type="button" onclick="openRandomTour()">Surprise me ✨</button>
+          <button class="btn btn-ghost" type="button" data-action="random-tour">Surprise me ✨</button>
         </div>
       </div>
       <aside class="hero-card" aria-label="Featured experiences preview">
-        <div class="hero-card-img"></div>
+        <div class="hero-card-img" id="heroPreview" role="img" aria-label="Featured excursion image"></div>
+        <button class="slideshow-toggle" type="button" data-action="toggle-hero-slideshow" aria-pressed="false" aria-label="Pause image slideshow">Ⅱ</button>
         <div class="stats-row">
           <div class="stat-pill"><b>10</b><small>Excursions</small></div>
           <div class="stat-pill"><b>3</b><small>Styles</small></div>
@@ -71,6 +74,7 @@
     </div>
   </section>
 
+</div>
 </main>
 
 <section class="detail-view" id="detailView"></section>
@@ -84,6 +88,14 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite">Link copied</div>
 
-<script src="assets/main.js?v=20260709-3"></script>
+<div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Excursion photo preview" aria-hidden="true">
+  <button class="modal-backdrop" type="button" data-action="close-gallery-modal" aria-label="Close photo preview"></button>
+  <div class="modal-frame">
+    <button class="modal-close" type="button" data-action="close-gallery-modal" aria-label="Close photo preview">×</button>
+    <img id="galleryModalImg" alt="" />
+  </div>
+</div>
+
+<script src="assets/main.js?v=20260709-22"></script>
 </body>
 </html>
