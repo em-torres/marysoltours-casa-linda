@@ -100,7 +100,6 @@
       "Local shopping and souvenirs"
     ],
     "info": [
-      "Lunch: Dominican buffet included",
       "Professional guide: Included",
       "Entrance fees: Included",
       "Accessibility: Suitable for guests of all ages and most fitness levels."
@@ -188,7 +187,7 @@
     "info": [
       "Excursion day: Everyday, if available",
       "Pick-up time: 8:20 AM",
-      "Lunch: Fish, chicken, rice, eggplant and salads",
+      "Lunch: Chicken, rice, eggplant and salads",
       "Transportation: Air-conditioned bus or jeep safari",
       "Optional additions: Monkey or Zip Line tours, additional payment",
       "Accessibility: Not recommended for wheelchair users due to multiple stairs."
@@ -219,21 +218,27 @@
     "heroImage": "assets/images/jeep-safari-damajagua-hero.webp",
     "gallery": [
       "assets/images/jeep-safari-damajagua-gallery-01.webp",
-      "assets/images/jeep-safari-damajagua-gallery-02.webp",
-      "assets/images/jeep-safari-damajagua-gallery-03.webp",
-      "assets/images/jeep-safari-damajagua-gallery-04.webp",
-      "assets/images/jeep-safari-damajagua-gallery-05.webp",
-      "assets/images/jeep-safari-damajagua-gallery-06.webp",
+      "assets/images/jeep-safari-damajagua-gallery-18.webp",
       "assets/images/jeep-safari-damajagua-gallery-07.webp",
-      "assets/images/jeep-safari-damajagua-gallery-08.webp",
-      "assets/images/jeep-safari-damajagua-gallery-09.webp",
-      "assets/images/jeep-safari-damajagua-gallery-10.webp",
-      "assets/images/jeep-safari-damajagua-gallery-11.webp",
+      "assets/images/jeep-safari-damajagua-gallery-20.webp",
       "assets/images/jeep-safari-damajagua-gallery-12.webp",
-      "assets/images/jeep-safari-damajagua-gallery-13.webp",
-      "assets/images/jeep-safari-damajagua-gallery-14.webp",
+      "assets/images/jeep-safari-damajagua-gallery-17.webp",
+      "assets/images/jeep-safari-damajagua-gallery-03.webp",
+      "assets/images/jeep-safari-damajagua-gallery-21.webp",
       "assets/images/jeep-safari-damajagua-gallery-15.webp",
-      "assets/images/jeep-safari-damajagua-gallery-16.webp"
+      "assets/images/jeep-safari-damajagua-gallery-05.webp",
+      "assets/images/jeep-safari-damajagua-gallery-19.webp",
+      "assets/images/jeep-safari-damajagua-gallery-09.webp",
+      "assets/images/jeep-safari-damajagua-gallery-14.webp",
+      "assets/images/jeep-safari-damajagua-gallery-22.webp",
+      "assets/images/jeep-safari-damajagua-gallery-02.webp",
+      "assets/images/jeep-safari-damajagua-gallery-11.webp",
+      "assets/images/jeep-safari-damajagua-gallery-04.webp",
+      "assets/images/jeep-safari-damajagua-gallery-16.webp",
+      "assets/images/jeep-safari-damajagua-gallery-08.webp",
+      "assets/images/jeep-safari-damajagua-gallery-13.webp",
+      "assets/images/jeep-safari-damajagua-gallery-06.webp",
+      "assets/images/jeep-safari-damajagua-gallery-10.webp"
     ]
   },
   {
@@ -264,6 +269,7 @@
       "Relaxing Caribbean atmosphere"
     ],
     "info": [
+      "Lunch: Dominican buffet included",
       "Open bar: Included",
       "Snorkeling equipment: Included",
       "Transportation: Air-conditioned bus",
@@ -310,7 +316,7 @@
     "tagline": "Experience the Dominican countryside like never before.",
     "category": "Off-Road",
     "duration": "2.5-3 hours",
-    "group": "Private/Small group",
+    "group": "Small group",
     "level": "Moderate",
     "destinations": [
       "Dominican Countryside",
@@ -332,7 +338,7 @@
     "info": [
       "Excursion day: Every day, mornings or afternoons",
       "Equipment: Helmet and safety instructions included",
-      "Driver requirement: Valid driver's license required to operate the buggy",
+      "Driver requirement: A valid driver's license is not required; you only need to be 17 years or older to drive.",
       "Transportation: Open-air jeep",
       "Accessibility: Moderate mobility required; uneven terrain."
     ],
@@ -386,7 +392,7 @@
     "tagline": "Ride through Puerto Plata's most spectacular landscapes.",
     "category": "Off-Road",
     "duration": "2.5-3 hours",
-    "group": "Private/Small group",
+    "group": "Small group",
     "level": "Moderate",
     "destinations": [
       "Dominican Countryside",
@@ -408,7 +414,7 @@
     "info": [
       "Excursion day: Every day, mornings or afternoons",
       "Equipment: Helmet and safety instructions included",
-      "Driver requirement: Valid driver's license required",
+      "Driver requirement: A valid driver's license is not required; you only need to be 17 years or older to drive.",
       "Transportation: Open-air jeep",
       "Accessibility: Participants must be able to operate or ride on an ATV and navigate uneven terrain."
     ],
@@ -473,7 +479,7 @@
     ],
     "overview": "Experience deep-sea fishing off Puerto Plata's coast. Whether experienced or trying it for the first time, the professional crew guides you to top fishing grounds. Enjoy time on the open ocean while targeting game fish and taking in Caribbean views.",
     "highlights": [
-      "Private fishing charter",
+      "Shared or Private fishing charter",
       "Professional captain and crew",
       "Premium fishing equipment included",
       "Opportunity to catch trophy fish",
@@ -487,6 +493,7 @@
       "Professional crew: Included",
       "Transportation: Air-conditioned bus",
       "Drinks: Water and soft drinks",
+      "Snacks: Sandwich-type snacks included",
       "Accessibility: Participants should be comfortable boarding a boat and spending several hours at sea."
     ],
     "bring": [
@@ -537,7 +544,7 @@
     "short": "Ride through jungle, villages, rivers, beaches and a natural lagoon with friendly guides.",
     "tagline": "Ride through the Dominican countryside, jungle, rivers and pristine beaches.",
     "category": "Nature & Culture",
-    "duration": "4 hours",
+    "duration": "2 hours",
     "group": "2-20 people",
     "level": "Easy to Moderate",
     "destinations": [
