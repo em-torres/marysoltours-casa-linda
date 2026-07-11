@@ -57,11 +57,17 @@
         "text": "Explore protected mangrove forests, birds, fish, crabs and native wildlife while enjoying a relaxing boat ride through nature."
       }
     ],
-    "heroImage": "assets/images/paradise-island-hero.jpg",
+    "heroImage": "assets/images/paradise-island-hero.webp",
     "gallery": [
-      "assets/images/paradise-island-gallery-01.jpg",
-      "assets/images/paradise-island-gallery-02.jpg",
-      "assets/images/paradise-island-gallery-03.jpg"
+      "assets/images/paradise-island-gallery-01.webp",
+      "assets/images/paradise-island-gallery-02.webp",
+      "assets/images/paradise-island-gallery-03.webp",
+      "assets/images/paradise-island-gallery-04.webp",
+      "assets/images/paradise-island-gallery-05.webp",
+      "assets/images/paradise-island-gallery-06.webp",
+      "assets/images/paradise-island-gallery-07.webp",
+      "assets/images/paradise-island-gallery-08.webp",
+      "assets/images/paradise-island-gallery-09.webp"
     ]
   },
   {
@@ -124,11 +130,32 @@
         "text": "Visit the colonial fortress and browse Dominican amber, larimar jewelry, coffee, rum, cigars and handcrafted souvenirs."
       }
     ],
-    "heroImage": "assets/images/puerto-plata-city-tour-hero.jpg",
+    "heroImage": "assets/images/puerto-plata-city-tour-hero.webp",
     "gallery": [
-      "assets/images/puerto-plata-city-tour-gallery-01.jpg",
-      "assets/images/puerto-plata-city-tour-gallery-02.jpg",
-      "assets/images/puerto-plata-city-tour-gallery-03.jpg"
+      "assets/images/puerto-plata-city-tour-gallery-01.webp",
+      "assets/images/puerto-plata-city-tour-gallery-02.webp",
+      "assets/images/puerto-plata-city-tour-gallery-03.webp",
+      "assets/images/puerto-plata-city-tour-gallery-04.webp",
+      "assets/images/puerto-plata-city-tour-gallery-05.webp",
+      "assets/images/puerto-plata-city-tour-gallery-06.webp",
+      "assets/images/puerto-plata-city-tour-gallery-07.webp",
+      "assets/images/puerto-plata-city-tour-gallery-08.webp",
+      "assets/images/puerto-plata-city-tour-gallery-09.webp",
+      "assets/images/puerto-plata-city-tour-gallery-10.webp",
+      "assets/images/puerto-plata-city-tour-gallery-11.webp",
+      "assets/images/puerto-plata-city-tour-gallery-12.webp",
+      "assets/images/puerto-plata-city-tour-gallery-13.webp",
+      "assets/images/puerto-plata-city-tour-gallery-14.webp",
+      "assets/images/puerto-plata-city-tour-gallery-15.webp",
+      "assets/images/puerto-plata-city-tour-gallery-16.webp",
+      "assets/images/puerto-plata-city-tour-gallery-17.webp",
+      "assets/images/puerto-plata-city-tour-gallery-18.webp",
+      "assets/images/puerto-plata-city-tour-gallery-19.webp",
+      "assets/images/puerto-plata-city-tour-gallery-20.webp",
+      "assets/images/puerto-plata-city-tour-gallery-21.webp",
+      "assets/images/puerto-plata-city-tour-gallery-22.webp",
+      "assets/images/puerto-plata-city-tour-gallery-23.webp",
+      "assets/images/puerto-plata-city-tour-gallery-24.webp"
     ]
   },
   {
@@ -189,11 +216,24 @@
         "text": "Relax after your adventure with a traditional Dominican lunch and unforgettable memories of Puerto Plata's natural beauty."
       }
     ],
-    "heroImage": "assets/images/jeep-safari-damajagua-hero.jpg",
+    "heroImage": "assets/images/jeep-safari-damajagua-hero.webp",
     "gallery": [
-      "assets/images/jeep-safari-damajagua-gallery-01.jpg",
-      "assets/images/jeep-safari-damajagua-gallery-02.jpg",
-      "assets/images/jeep-safari-damajagua-gallery-03.jpg"
+      "assets/images/jeep-safari-damajagua-gallery-01.webp",
+      "assets/images/jeep-safari-damajagua-gallery-02.webp",
+      "assets/images/jeep-safari-damajagua-gallery-03.webp",
+      "assets/images/jeep-safari-damajagua-gallery-04.webp",
+      "assets/images/jeep-safari-damajagua-gallery-05.webp",
+      "assets/images/jeep-safari-damajagua-gallery-06.webp",
+      "assets/images/jeep-safari-damajagua-gallery-07.webp",
+      "assets/images/jeep-safari-damajagua-gallery-08.webp",
+      "assets/images/jeep-safari-damajagua-gallery-09.webp",
+      "assets/images/jeep-safari-damajagua-gallery-10.webp",
+      "assets/images/jeep-safari-damajagua-gallery-11.webp",
+      "assets/images/jeep-safari-damajagua-gallery-12.webp",
+      "assets/images/jeep-safari-damajagua-gallery-13.webp",
+      "assets/images/jeep-safari-damajagua-gallery-14.webp",
+      "assets/images/jeep-safari-damajagua-gallery-15.webp",
+      "assets/images/jeep-safari-damajagua-gallery-16.webp"
     ]
   },
   {
@@ -256,9 +296,10 @@
     ],
     "heroImage": "assets/images/catamaran-hero.jpg",
     "gallery": [
-      "assets/images/catamaran-gallery-01.jpg",
-      "assets/images/catamaran-gallery-02.jpg",
-      "assets/images/catamaran-gallery-03.jpg"
+      "assets/images/catamaran-gallery-04.webp",
+      "assets/images/catamaran-gallery-05.webp",
+      "assets/images/catamaran-gallery-06.webp",
+      "assets/images/catamaran-gallery-07.webp"
     ]
   },
   {
@@ -321,11 +362,20 @@
         "text": "Pause at a beautiful beach for photos, ocean breeze and a refreshing break before heading back."
       }
     ],
-    "heroImage": "assets/images/dune-buggy-hero.jpg",
+    "heroImage": "assets/images/dune-buggy-hero.webp",
     "gallery": [
-      "assets/images/dune-buggy-gallery-01.jpg",
-      "assets/images/dune-buggy-gallery-02.jpg",
-      "assets/images/dune-buggy-gallery-03.jpg"
+      "assets/images/dune-buggy-gallery-01.webp",
+      "assets/images/dune-buggy-gallery-02.webp",
+      "assets/images/dune-buggy-gallery-03.webp",
+      "assets/images/dune-buggy-gallery-04.webp",
+      "assets/images/dune-buggy-gallery-05.webp",
+      "assets/images/dune-buggy-gallery-06.webp",
+      "assets/images/dune-buggy-gallery-07.webp",
+      "assets/images/dune-buggy-gallery-08.webp",
+      "assets/images/dune-buggy-gallery-09.webp",
+      "assets/images/dune-buggy-gallery-10.webp",
+      "assets/images/dune-buggy-gallery-11.webp",
+      "assets/images/dune-buggy-gallery-12.webp"
     ]
   },
   {
@@ -389,11 +439,21 @@
         "text": "Relax at a beautiful beach stop, enjoy the breeze and capture photos of the North Coast."
       }
     ],
-    "heroImage": "assets/images/atv-adventure-hero.jpg",
+    "heroImage": "assets/images/atv-adventure-hero.webp",
     "gallery": [
-      "assets/images/atv-adventure-gallery-01.jpg",
-      "assets/images/atv-adventure-gallery-02.jpg",
-      "assets/images/atv-adventure-gallery-03.jpg"
+      "assets/images/atv-adventure-gallery-01.webp",
+      "assets/images/atv-adventure-gallery-02.webp",
+      "assets/images/atv-adventure-gallery-03.webp",
+      "assets/images/atv-adventure-gallery-04.webp",
+      "assets/images/atv-adventure-gallery-05.webp",
+      "assets/images/atv-adventure-gallery-06.webp",
+      "assets/images/atv-adventure-gallery-07.webp",
+      "assets/images/atv-adventure-hero.webp",
+      "assets/images/atv-adventure-gallery-08.webp",
+      "assets/images/atv-adventure-gallery-09.webp",
+      "assets/images/atv-adventure-gallery-10.webp",
+      "assets/images/atv-adventure-gallery-11.webp",
+      "assets/images/atv-adventure-gallery-12.webp"
     ]
   },
   {
@@ -455,11 +515,19 @@
         "text": "Even non-anglers love the coastal views, fresh sea breeze and peaceful open-ocean atmosphere."
       }
     ],
-    "heroImage": "assets/images/deep-sea-fishing-hero.jpg",
+    "heroImage": "assets/images/deep-sea-fishing-hero.webp",
     "gallery": [
-      "assets/images/deep-sea-fishing-gallery-01.jpg",
-      "assets/images/deep-sea-fishing-gallery-02.jpg",
-      "assets/images/deep-sea-fishing-gallery-03.jpg"
+      "assets/images/deep-sea-fishing-gallery-01.webp",
+      "assets/images/deep-sea-fishing-gallery-02.webp",
+      "assets/images/deep-sea-fishing-gallery-03.webp",
+      "assets/images/deep-sea-fishing-gallery-04.webp",
+      "assets/images/deep-sea-fishing-gallery-05.webp",
+      "assets/images/deep-sea-fishing-gallery-06.webp",
+      "assets/images/deep-sea-fishing-gallery-07.webp",
+      "assets/images/deep-sea-fishing-gallery-08.webp",
+      "assets/images/deep-sea-fishing-gallery-09.webp",
+      "assets/images/deep-sea-fishing-gallery-10.webp",
+      "assets/images/deep-sea-fishing-gallery-11.webp"
     ]
   },
   {
@@ -524,11 +592,29 @@
         "text": "Begin at a private ranch before riding through tropical vegetation, rivers and Dominican villages."
       }
     ],
-    "heroImage": "assets/images/horseback-riding-hero.jpg",
+    "heroImage": "assets/images/horseback-riding-hero.webp",
     "gallery": [
-      "assets/images/horseback-riding-gallery-01.jpg",
-      "assets/images/horseback-riding-gallery-02.jpg",
-      "assets/images/horseback-riding-gallery-03.jpg"
+      "assets/images/horseback-riding-gallery-01.webp",
+      "assets/images/horseback-riding-gallery-02.webp",
+      "assets/images/horseback-riding-gallery-03.webp",
+      "assets/images/horseback-riding-gallery-04.webp",
+      "assets/images/horseback-riding-gallery-05.webp",
+      "assets/images/horseback-riding-gallery-06.webp",
+      "assets/images/horseback-riding-gallery-07.webp",
+      "assets/images/horseback-riding-gallery-08.webp",
+      "assets/images/horseback-riding-gallery-09.webp",
+      "assets/images/horseback-riding-gallery-10.webp",
+      "assets/images/horseback-riding-gallery-11.webp",
+      "assets/images/horseback-riding-gallery-12.webp",
+      "assets/images/horseback-riding-gallery-13.webp",
+      "assets/images/horseback-riding-gallery-14.webp",
+      "assets/images/horseback-riding-gallery-15.webp",
+      "assets/images/horseback-riding-gallery-16.webp",
+      "assets/images/horseback-riding-gallery-17.webp",
+      "assets/images/horseback-riding-gallery-18.webp",
+      "assets/images/horseback-riding-gallery-19.webp",
+      "assets/images/horseback-riding-gallery-20.webp",
+      "assets/images/horseback-riding-gallery-21.webp"
     ]
   },
   {
@@ -589,11 +675,17 @@
         "text": "Visit a local fruit plantation, enjoy seasonal tropical fruits and learn about Dominican agriculture."
       }
     ],
-    "heroImage": "assets/images/laguna-dudu-gri-gri-playa-caleton-hero.jpg",
+    "heroImage": "assets/images/laguna-dudu-gri-gri-playa-caleton-hero.webp",
     "gallery": [
-      "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-01.jpg",
-      "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-02.jpg",
-      "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-03.jpg"
+      "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-01.webp",
+      "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-02.webp",
+      "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-03.webp",
+      "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-04.webp",
+      "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-05.webp",
+      "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-06.webp",
+      "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-07.webp",
+      "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-08.webp",
+      "assets/images/laguna-dudu-gri-gri-playa-caleton-gallery-09.webp"
     ]
   },
   {
@@ -657,11 +749,25 @@
         "text": "Upgrade with experiences such as swimming with dolphins, interacting with sea lions or snorkeling in the reef aquarium."
       }
     ],
-    "heroImage": "assets/images/ocean-world-hero.jpg",
+    "heroImage": "assets/images/ocean-world-hero.webp",
     "gallery": [
-      "assets/images/ocean-world-gallery-01.jpg",
-      "assets/images/ocean-world-gallery-02.jpg",
-      "assets/images/ocean-world-gallery-03.jpg"
+      "assets/images/ocean-world-gallery-01.webp",
+      "assets/images/ocean-world-gallery-02.webp",
+      "assets/images/ocean-world-gallery-03.webp",
+      "assets/images/ocean-world-gallery-04.webp",
+      "assets/images/ocean-world-gallery-05.webp",
+      "assets/images/ocean-world-gallery-06.webp",
+      "assets/images/ocean-world-gallery-07.webp",
+      "assets/images/ocean-world-gallery-08.webp",
+      "assets/images/ocean-world-gallery-09.webp",
+      "assets/images/ocean-world-gallery-10.webp",
+      "assets/images/ocean-world-gallery-11.webp",
+      "assets/images/ocean-world-gallery-12.webp",
+      "assets/images/ocean-world-gallery-13.webp",
+      "assets/images/ocean-world-gallery-14.webp",
+      "assets/images/ocean-world-gallery-15.webp",
+      "assets/images/ocean-world-gallery-16.webp",
+      "assets/images/ocean-world-gallery-17.webp"
     ]
   }
 ]

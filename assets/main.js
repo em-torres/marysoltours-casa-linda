@@ -11,17 +11,22 @@ const hero = document.getElementById('home');
 const heroPreview = document.getElementById('heroPreview');
 const galleryModal = document.getElementById('galleryModal');
 const galleryModalImg = document.getElementById('galleryModalImg');
+const galleryModalCount = document.getElementById('galleryModalCount');
 let activeCategory = 'All';
 let heroSlideIndex = 0;
 let heroSlideshowTimer;
 let heroSlideshowPaused = false;
 let heroFadeTimer;
 let modalReturnTarget;
+let modalGalleryItems = [];
+let modalGalleryIndex = 0;
 let categories = ['All'];
 let heroSlides = [];
 
 const assetUrl = path => new URL(path, document.baseURI).href;
 const cssImage = path => `url(${assetUrl(path)})`;
+const whatsappNumber = '18498595151';
+const whatsappLink = excursionName => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`I would like to know more about the ${excursionName} excursion...`)}`;
 const attr = value => String(value).replace(/[&<>"']/g, c => ({
     '&': '&amp;',
     '<': '&lt;',
@@ -155,10 +160,11 @@ function list(items, cls = '') {
 function detailTemplate(t) {
     const otherTours = tours.filter(x => x.id !== t.id).slice(0, 8).map(x => `<a class="mini-tour" href="#tour/${attr(x.id)}" style="--img:${cssImage(x.heroImage)}" aria-label="Open details for ${attr(x.title)}"><span>${x.title}</span></a>`).join('');
     const activities = t.activities.map((a, i) => `<article class="activity-card reveal"><img src="${assetUrl(t.gallery[i])}" alt="${a.title}"><div class="activity-body"><div class="activity-num">${a.num}</div><h3 class="serif">${a.title}</h3><p>${a.text}</p></div></article>`).join('');
+    const bookingUrl = whatsappLink(t.title);
     const gallery = t.gallery.map((src, i) => {
         const imageUrl = assetUrl(src);
         const alt = `${t.title} gallery image ${i + 1}`;
-        return `<button class="gallery-slide" type="button" data-action="open-gallery-modal" data-src="${attr(imageUrl)}" data-alt="${attr(alt)}" aria-label="Open ${attr(alt)}"><img src="${imageUrl}" alt="${attr(alt)}" loading="lazy"></button>`;
+        return `<button class="gallery-slide" type="button" data-action="open-gallery-modal" data-index="${i}" data-src="${attr(imageUrl)}" data-alt="${attr(alt)}" aria-label="Open ${attr(alt)}"><img src="${imageUrl}" alt="${attr(alt)}" loading="lazy"></button>`;
     }).join('');
     return `
       <button class="back-btn" type="button" data-action="all-excursions">← All excursions</button>
@@ -168,6 +174,10 @@ function detailTemplate(t) {
             <div class="eyebrow reveal">${t.category}</div>
             <h1 class="serif reveal">${t.title}</h1>
             <p class="reveal">${t.tagline}</p>
+            <div class="detail-actions reveal">
+              <a class="btn btn-primary" href="${bookingUrl}" target="_blank" rel="noopener">Book this adventure <span>→</span></a>
+              <a class="btn btn-ghost" href="#activities">View activities <span>↓</span></a>
+            </div>
           </div>
           <aside class="detail-panel reveal">
             <div class="detail-stat-grid">
@@ -275,12 +285,31 @@ function moveGallery(button, direction) {
 function openGalleryModal(button) {
     if (!galleryModal || !galleryModalImg) return;
     modalReturnTarget = button;
-    galleryModalImg.src = button.dataset.src;
-    galleryModalImg.alt = button.dataset.alt || 'Excursion gallery image';
+    modalGalleryItems = Array.from(button.closest('.gallery-track')?.querySelectorAll('.gallery-slide') || []).map(item => ({
+        src: item.dataset.src,
+        alt: item.dataset.alt || 'Excursion gallery image',
+        trigger: item
+    }));
+    modalGalleryIndex = Math.max(0, modalGalleryItems.findIndex(item => item.trigger === button));
+    setGalleryModalImage(modalGalleryIndex);
     galleryModal.classList.add('active');
     galleryModal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
     galleryModal.querySelector('.modal-close')?.focus({preventScroll: true});
+}
+
+function setGalleryModalImage(index) {
+    if (!galleryModalImg || !modalGalleryItems.length) return;
+    modalGalleryIndex = (index + modalGalleryItems.length) % modalGalleryItems.length;
+    const item = modalGalleryItems[modalGalleryIndex];
+    galleryModalImg.src = item.src;
+    galleryModalImg.alt = item.alt;
+    if (galleryModalCount) galleryModalCount.textContent = `${modalGalleryIndex + 1} / ${modalGalleryItems.length}`;
+}
+
+function moveGalleryModal(direction) {
+    if (!galleryModal?.classList.contains('active')) return;
+    setGalleryModalImage(modalGalleryIndex + direction);
 }
 
 function closeGalleryModal() {
@@ -289,8 +318,12 @@ function closeGalleryModal() {
     galleryModal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
     galleryModalImg.removeAttribute('src');
-    modalReturnTarget?.focus({preventScroll: true});
+    const focusTarget = modalGalleryItems[modalGalleryIndex]?.trigger || modalReturnTarget;
+    focusTarget?.focus({preventScroll: true});
     modalReturnTarget = null;
+    modalGalleryItems = [];
+    modalGalleryIndex = 0;
+    if (galleryModalCount) galleryModalCount.textContent = '';
 }
 
 function wireReveals() {
@@ -322,9 +355,14 @@ document.addEventListener('click', e => {
     if (action === 'gallery-next') moveGallery(actionTarget, 1);
     if (action === 'open-gallery-modal') openGalleryModal(actionTarget);
     if (action === 'close-gallery-modal') closeGalleryModal();
+    if (action === 'modal-gallery-prev') moveGalleryModal(-1);
+    if (action === 'modal-gallery-next') moveGalleryModal(1);
 });
 document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && galleryModal?.classList.contains('active')) closeGalleryModal();
+    if (!galleryModal?.classList.contains('active')) return;
+    if (e.key === 'Escape') closeGalleryModal();
+    if (e.key === 'ArrowLeft') moveGalleryModal(-1);
+    if (e.key === 'ArrowRight') moveGalleryModal(1);
 });
 searchInput.addEventListener('input', renderCards);
 window.addEventListener('hashchange', route);
