@@ -574,6 +574,9 @@ body.detail-open .page-shell {
     display: flex;
     width: max-content;
     animation: marquee 22s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .ribbon span {
@@ -590,7 +593,7 @@ body.detail-open .page-shell {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(-25%);
     }
 }
 
@@ -887,6 +890,8 @@ body.detail-open .page-shell {
     background-image: linear-gradient(90deg, rgba(4, 20, 36, .92) 0%, rgba(4, 20, 36, .64) 42%, rgba(4, 20, 36, .16) 100%), var(--hero);
     background-size: cover;
     background-position: center;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 66%, rgba(0, 0, 0, .78) 78%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 66%, rgba(0, 0, 0, .78) 78%, transparent 100%);
     animation: kenburns 18s ease-in-out infinite alternate;
 }
 
@@ -894,9 +899,9 @@ body.detail-open .page-shell {
     content: "";
     position: absolute;
     inset: auto 0 0;
-    height: 28%;
+    height: 34%;
     z-index: -2;
-    background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, .22) 42%, #fff 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, .14) 52%, transparent 100%);
 }
 
 .back-btn {
@@ -1500,7 +1505,9 @@ footer .container {
     position: fixed;
     bottom: 22px;
     left: 50%;
-    transform: translate(-50%, 120%);
+    transform: translate(-50%, calc(100% + 40px));
+    opacity: 0;
+    pointer-events: none;
     background: var(--navy);
     color: white;
     padding: 14px 18px;
@@ -1513,6 +1520,8 @@ footer .container {
 
 .toast.show {
     transform: translate(-50%, 0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 @media (max-width: 1024px) {

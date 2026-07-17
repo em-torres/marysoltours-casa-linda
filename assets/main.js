@@ -176,7 +176,7 @@ function detailTemplate(t) {
             <p class="reveal">${t.tagline}</p>
             <div class="detail-actions reveal">
               <a class="btn btn-primary" href="${bookingUrl}" target="_blank" rel="noopener">Book this adventure <span>→</span></a>
-              <a class="btn btn-ghost" href="#activities">View activities <span>↓</span></a>
+              <a class="btn btn-ghost" href="#overview" data-action="view-overview">View activities <span>↓</span></a>
             </div>
           </div>
           <aside class="detail-panel reveal">
@@ -191,7 +191,7 @@ function detailTemplate(t) {
       </section>
       <div class="content-wrap">
         <div class="detail-layout">
-          <article class="info-card reveal"><div class="section-kicker">Overview</div><h2 class="serif">Get to know the experience</h2><p>${t.overview}</p></article>
+          <article class="info-card reveal" id="overview"><div class="section-kicker">Overview</div><h2 class="serif">Get to know the experience</h2><p>${t.overview}</p></article>
           <aside class="info-card reveal"><h3 class="serif">Destinations</h3>${list(t.destinations, 'pill-list')}</aside>
         </div>
         <div class="detail-layout detail-layout-three">
@@ -348,6 +348,10 @@ document.addEventListener('click', e => {
     const actionTarget = e.target.closest('[data-action]');
     if (!actionTarget) return;
     const action = actionTarget.dataset.action;
+    if (action === 'view-overview') {
+        e.preventDefault();
+        detailView.querySelector('#overview')?.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
     if (action === 'random-tour') openRandomTour();
     if (action === 'all-excursions') goHome();
     if (action === 'toggle-hero-slideshow') toggleHeroSlideshow(actionTarget);
