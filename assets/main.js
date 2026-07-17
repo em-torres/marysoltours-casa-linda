@@ -25,7 +25,7 @@ let heroSlides = [];
 
 const assetUrl = path => new URL(path, document.baseURI).href;
 const cssImage = path => `url(${assetUrl(path)})`;
-const whatsappNumber = '18498595151';
+const whatsappNumber = '18095105168';
 const whatsappLink = excursionName => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`I would like to know more about the ${excursionName} excursion...`)}`;
 const attr = value => String(value).replace(/[&<>"']/g, c => ({
     '&': '&amp;',
